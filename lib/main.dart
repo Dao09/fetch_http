@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget{
 
 class HomePageState extends State<HomePage>{
  // final String url="https://run.mocky.io/v3/78a8c6f3-59cb-4f0a-a196-0f5ee1c794bc";
-  List data=['yvbjg'];
+  List data=[1];
   var url=Uri.parse('http://run.mocky.io/v3/78a8c6f3-59cb-4f0a-a196-0f5ee1c794bc');
   @override
   void initSate(){
@@ -43,7 +43,7 @@ class HomePageState extends State<HomePage>{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text("Retrieve json data"),
+        title: const Text("Retrieve json data"),
       ),
       body:ListView.builder(  
         itemCount:data==null?0:data.length ,
@@ -55,8 +55,8 @@ class HomePageState extends State<HomePage>{
                 children: <Widget>[
               Card(
                 child: Container(
-                  child: Text(data[index]['name']),
                   padding: const EdgeInsets.all(16),
+                  child: Text(data[index]['name']),
                 )
               )
               ],)
